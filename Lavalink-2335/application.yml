@@ -1,0 +1,120 @@
+﻿server:
+  port: 2335
+  address: 0.0.0.0
+  http2:
+    enabled: false
+
+lavalink:
+  # Use local plugin JARs from `plugins/`; avoid remote dependency downloads
+  jarPaths:
+    - ./plugins/youtube-plugin-1.13.3.jar
+  server:
+    password: "youshallnotpass"
+    sources:
+      youtube: false
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      nico: true
+      http: true
+      local: false
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
+    nonAllocatingFrameBuffer: false
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: LOW
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    gc-warnings: true
+    timeouts:
+      connectTimeoutMs: 3000
+      connectionRequestTimeoutMs: 3000
+      socketTimeoutMs: 3000
+
+plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - MUSIC
+      - WEB
+      - ANDROID_TESTSUITE
+      - TV
+      - IOS
+      - ANDROID
+    oauth:
+      enabled: false
+
+  lavasrc:
+    providers:
+      - "ytsearch:\"%ISRC%\""
+      - "ytsearch:%QUERY%"
+    sources:
+      spotify: true
+      applemusic: false
+      deezer: false
+      yandexmusic: false
+      soundcloud: true
+    # Spotify credentials for the lavasrc provider (fill these with your app's values)
+    spotify:
+      clientId: "d642b0851dc0457cb68ad69c5e5fa39"
+      clientSecret: "c661bfed5d874070bbf555d9ccbf9465"
+      # Optionally set a redirect URI and scopes if your setup requires it
+      redirectUri: "http://localhost/callback"
+      scopes: ""
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+sentry:
+  dsn: ""
+  environment: ""
+
+logging:
+  file:
+    path: ./logs/
+
+  level:
+    root: INFO
+    lavalink: INFO
+
+  request:
+    enabled: true
+    includeClientInfo: true
+    includeHeaders: false
+    includeQueryString: true
+    includePayload: true
+    maxPayloadLength: 10000
+
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      max-history: 30
+
+spring:
+  main:
+    banner-mode: log
+  datasource:
+    jdbc-url: jdbc:h2:mem:lavalink_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ""

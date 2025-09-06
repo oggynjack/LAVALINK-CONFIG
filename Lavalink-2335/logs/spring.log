@@ -1,0 +1,719 @@
+2025-08-22T20:42:19.842+01:00  INFO 21128 --- [Lavalink] [main] o.s.boot.SpringApplication               :   .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+
+2025-08-22T20:42:20.064+01:00  INFO 21128 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.1.1 using Java 24.0.2 with PID 21128 (C:\Lavalink\Lavalink.jar started by Administrator in C:\Lavalink)
+2025-08-22T20:42:20.066+01:00  INFO 21128 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T20:42:20.908+01:00  INFO 21128 --- [Lavalink] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d6bf653-92ea-3fde-943a-10b9f8cd696e
+2025-08-22T20:42:21.634+01:00  INFO 21128 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Found plugin 'youtube-plugin' version '1.13.3'
+2025-08-22T20:42:21.635+01:00  INFO 21128 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Found plugin 'youtube-plugin' version '1.13.5'
+2025-08-22T20:42:21.637+01:00  WARN 21128 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2025-08-22T20:42:21.649+01:00  INFO 21128 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-22T20:42:21.684+01:00 ERROR 21128 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.1.1]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.1.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.1.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.1.1]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.1.1]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	... 23 common frames omitted
+Caused by: java.lang.RuntimeException: Invalid dependency "https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.4"
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:56) ~[classes!/:4.1.1]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:30) ~[classes!/:4.1.1]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.1.1]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	... 25 common frames omitted
+
+2025-08-22 20:56:51.679  INFO 21220 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.6)
+
+
+2025-08-22 20:56:51.793  INFO 21220 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 24.0.2 on WIN-16HPJ4CIF5C with PID 21220 (C:\Lavalink\Lavalink.jar started by Administrator in C:\Lavalink)
+2025-08-22 20:56:51.794  INFO 21220 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2025-08-22 20:56:53.228  WARN 21220 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$EnhancerBySpringCGLIB$$32a614b9]: Constructor threw exception; nested exception is java.lang.RuntimeException: Invalid dependency "https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.4"
+2025-08-22 20:56:53.238  INFO 21220 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-08-22 20:56:53.301 ERROR 21220 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$EnhancerBySpringCGLIB$$32a614b9]: Constructor threw exception; nested exception is java.lang.RuntimeException: Invalid dependency "https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.4"
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:296) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:133) ~[classes!/:na]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Lavalink.jar:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$EnhancerBySpringCGLIB$$32a614b9]: Constructor threw exception; nested exception is java.lang.RuntimeException: Invalid dependency "https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.4"
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:311) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 23 common frames omitted
+Caused by: java.lang.RuntimeException: Invalid dependency "https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.4"
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:52) ~[classes!/:na]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:26) ~[classes!/:na]
+	at lavalink.server.bootstrap.PluginManager$$EnhancerBySpringCGLIB$$32a614b9.<init>(<generated>) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 25 common frames omitted
+
+2025-08-22 20:58:13.145  INFO 21832 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.6)
+
+
+2025-08-22 20:58:13.299  INFO 21832 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 24.0.2 on WIN-16HPJ4CIF5C with PID 21832 (C:\Lavalink\Lavalink.jar started by Administrator in C:\Lavalink)
+2025-08-22 20:58:13.300  INFO 21832 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2025-08-22 20:58:14.352  INFO 21832 --- [main] lavalink.server.bootstrap.PluginManager  : Found plugin 'youtube-plugin' version 1.13.3
+2025-08-22 20:58:14.400  INFO 21832 --- [main] lavalink.server.bootstrap.PluginManager  : Loaded youtube-plugin-1.13.3.jar (16 classes)
+2025-08-22 20:58:14.411  INFO 21832 --- [main] lavalink.server.bootstrap.PluginManager  : Found plugin 'youtube-plugin' version 1.13.5
+2025-08-22 20:58:14.427  INFO 21832 --- [main] lavalink.server.bootstrap.PluginManager  : Loaded youtube-plugin-1.13.5.jar (16 classes)
+2025-08-22 20:58:14.776  INFO 21832 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.318 seconds (JVM running for 3.174)
+2025-08-22 20:58:14.780  INFO 21832 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/lavalink-devs/Lavalink/issues/295
+2025-08-22 20:58:14.965  INFO 21832 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.7.13
+	Build time:     20.09.2024 19:49:35 UTC
+	Branch          HEAD
+	Commit:         3c6134d
+	Commit time:    20.09.2024 19:40:52 UTC
+	JVM:            24.0.2
+	Lavaplayer      1.5.6
+
+2025-08-22 20:58:14.971  INFO 21832 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.6)
+
+
+2025-08-22 20:58:14.983  INFO 21832 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2025-08-22 20:58:16.289  WARN 21832 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2025-08-22 20:58:16.373  INFO 21832 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2025-08-22 20:58:16.374  INFO 21832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1384 ms
+2025-08-22 20:58:17.492  INFO 21832 --- [main] dev.lavalink.youtube.plugin.PluginInfo   : ********************************************
+YOUTUBE-SOURCE VERSION 1.13.5 AVAILABLE
+https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.5
+Update to ensure the YouTube source remains operational!
+********************************************
+2025-08-22 20:58:17.702  INFO 21832 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2025-08-22 20:58:18.098  WARN 21832 --- [main] d.l.youtube.plugin.ClientProvider        : Failed to resolve ANDROID_TESTSUITE into a Client
+2025-08-22 20:58:18.100  WARN 21832 --- [main] dev.lavalink.youtube.clients.Android     : ANDROID is broken with no known fix. It is no longer advised to use this client.
+2025-08-22 20:58:18.115  INFO 21832 --- [main] d.l.youtube.plugin.YoutubePluginLoader   : YouTube source initialised with clients: WEB_REMIX, WEB, TVHTML5, IOS, ANDROID 
+2025-08-22 20:58:18.482  INFO 21832 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
+2025-08-22 20:58:18.483  INFO 21832 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2025-08-22 20:58:18.487  INFO 21832 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2025-08-22 20:58:18.498  INFO 21832 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2025-08-22 20:58:18.669  WARN 21832 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2025-08-22 20:58:19.037  INFO 21832 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2025-08-22 20:58:19.059  INFO 21832 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2025-08-22 20:58:19.136  INFO 21832 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2025-08-22 20:58:19.363  INFO 21832 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2025-08-22 20:58:19.590  INFO 21832 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2025-08-22 20:58:19.595  INFO 21832 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.808 seconds (JVM running for 7.993)
+2025-08-22 20:58:19.596  INFO 21832 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2025-08-22 20:59:43.847  INFO 21832 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-22 20:59:43.847  INFO 21832 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-22 20:59:43.848  INFO 21832 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-22 20:59:43.952  WARN 21832 --- [XNIO-1 task-1] l.s.config.RequestAuthorizationFilter    : Authorization missing for 127.0.0.1 on GET /version
+2025-08-22 20:59:43.965  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=127.0.0.1
+2025-08-22 21:11:53.939  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:11:53.940  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:12:04.230  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:12:04.231  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:12:14.254  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:12:14.323  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:12:24.379  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:12:24.379  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:12:34.454  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:12:34.455  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:12:47.942  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:12:47.956  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:12:57.974  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:12:57.976  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:13:07.983  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:13:07.985  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:13:17.981  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:13:17.982  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:13:27.979  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:13:27.980  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:13:39.653  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:13:39.654  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:13:49.657  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:13:49.658  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:13:59.667  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:13:59.668  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:14:09.672  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:14:09.678  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:14:19.689  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:14:19.691  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:14:32.689  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:14:32.689  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:14:42.691  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:14:42.693  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:14:52.701  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:14:52.701  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:15:02.704  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:15:02.705  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:15:12.707  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:15:12.707  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:15:25.628  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:15:25.629  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:15:35.644  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:15:35.645  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:15:45.653  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:15:45.653  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:15:55.659  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:15:55.662  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:16:05.732  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:16:05.733  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:16:17.388  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:16:17.410  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:16:27.418  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:16:27.419  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:16:37.434  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:16:37.434  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:16:47.442  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:16:47.443  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:16:57.460  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:16:57.462  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:17:09.349  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:17:09.350  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:17:19.367  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:17:19.370  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:17:29.376  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:17:29.377  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:17:39.371  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:17:39.372  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:17:49.376  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:17:49.376  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:18:01.222  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:18:01.223  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:18:11.240  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:18:11.241  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:18:21.247  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:18:21.249  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:18:31.251  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:18:31.252  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:18:41.249  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:18:41.297  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:19:04.913  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:19:04.913  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:19:14.990  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:19:14.990  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:19:25.000  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:19:25.002  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:19:35.015  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:19:35.015  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:19:41.732  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:19:41.734  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:19:51.734  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:19:51.736  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:20:01.732  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:20:01.733  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:20:11.758  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:20:11.758  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:20:21.795  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:20:21.796  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:20:39.767  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=0:0:0:0:0:0:0:1
+2025-08-22 21:20:46.822  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=0:0:0:0:0:0:0:1
+2025-08-22 21:25:34.969  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:25:34.970  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:25:44.978  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:25:44.979  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:25:54.993  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:25:54.995  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:26:05.000  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:26:05.001  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:26:14.996  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:26:14.997  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:26:22.652  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:26:22.653  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:26:32.657  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:26:32.658  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:26:42.657  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:26:42.658  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:26:54.011  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:26:54.012  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:27:04.055  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:27:04.057  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:27:13.271  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=0:0:0:0:0:0:0:1
+2025-08-22 21:27:14.075  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:27:14.076  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:27:19.684  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=0:0:0:0:0:0:0:1
+2025-08-22 21:27:24.078  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:27:24.080  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:27:34.074  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:27:34.076  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:28:03.639  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:28:03.640  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:28:13.636  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:28:13.637  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:28:23.688  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:28:23.689  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:28:33.688  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:28:33.688  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:28:43.691  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:28:43.692  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:43:17.673  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:43:17.683  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:43:27.691  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:43:27.692  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:43:37.780  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:43:37.781  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:43:47.777  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:43:47.780  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:43:57.795  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 21:43:57.841  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 21:51:08.880  WARN 21832 --- [XNIO-1 task-1] l.s.config.RequestAuthorizationFilter    : Authorization missing for 127.0.0.1 on GET /version
+2025-08-22 21:51:08.881  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=127.0.0.1
+2025-08-22 21:52:54.506  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=127.0.0.1
+2025-08-22 22:02:20.613  WARN 21832 --- [XNIO-1 task-1] l.s.config.RequestAuthorizationFilter    : Authorization missing for 127.0.0.1 on GET /version
+2025-08-22 22:02:20.614  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /version, client=127.0.0.1
+2025-08-22 22:03:17.533  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 22:03:17.534  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 22:03:27.530  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 22:03:27.533  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 22:03:37.531  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 22:03:37.532  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 22:03:47.530  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 22:03:47.531  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 22:03:57.530  WARN 21832 --- [XNIO-1 task-1] o.s.web.servlet.PageNotFound             : No mapping for GET /v4/websocket
+2025-08-22 22:03:57.531  INFO 21832 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /v4/websocket, client=127.0.0.1
+2025-08-22 22:08:46.862  INFO 21832 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2025-08-22 22:08:46.999  INFO 21832 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-08-22 22:08:47.002  INFO 21832 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2025-08-22T22:09:46.456+01:00  INFO 16800 --- [Lavalink] [main] o.s.boot.SpringApplication               :   .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+
+2025-08-22T22:09:46.677+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.1.1 using Java 24.0.2 with PID 16800 (C:\Lavalink\Lavalink.jar started by Administrator in C:\Lavalink)
+2025-08-22T22:09:46.680+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T22:09:47.636+01:00  INFO 16800 --- [Lavalink] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d6bf653-92ea-3fde-943a-10b9f8cd696e
+2025-08-22T22:09:48.391+01:00  INFO 16800 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Loaded 'youtube-plugin-1.13.3.jar' (16 classes)
+2025-08-22T22:09:48.875+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 3.193 seconds (process running for 4.066)
+2025-08-22T22:09:49.043+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4.1.1
+	Build time:     05.06.2025 07:37:42 UTC
+	Branch          HEAD
+	Commit:         4238202
+	Commit time:    05.06.2025 07:11:37 UTC
+	JVM:            24.0.2
+	Lavaplayer      2.2.3
+
+2025-08-22T22:09:49.047+01:00  INFO 16800 --- [Lavalink] [main] o.s.boot.SpringApplication               :   .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+
+2025-08-22T22:09:49.059+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T22:09:49.929+01:00  WARN 16800 --- [Lavalink] [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2025-08-22T22:09:49.955+01:00  INFO 16800 --- [Lavalink] [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2025-08-22T22:09:49.955+01:00  INFO 16800 --- [Lavalink] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 846 ms
+2025-08-22T22:09:51.140+01:00  INFO 16800 --- [Lavalink] [main] dev.lavalink.youtube.plugin.PluginInfo   : ********************************************
+YOUTUBE-SOURCE VERSION 1.13.5 AVAILABLE
+https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.5
+Update to ensure the YouTube source remains operational!
+********************************************
+2025-08-22T22:09:51.308+01:00  INFO 16800 --- [Lavalink] [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2025-08-22T22:09:51.745+01:00  WARN 16800 --- [Lavalink] [main] d.l.youtube.plugin.ClientProvider        : Failed to resolve ANDROID_TESTSUITE into a Client
+2025-08-22T22:09:51.747+01:00  WARN 16800 --- [Lavalink] [main] dev.lavalink.youtube.clients.Android     : ANDROID is broken with no known fix. It is no longer advised to use this client.
+2025-08-22T22:09:51.771+01:00  INFO 16800 --- [Lavalink] [main] d.l.youtube.plugin.YoutubePluginLoader   : YouTube source initialised with clients: WEB_REMIX, WEB, TVHTML5, IOS, ANDROID 
+2025-08-22T22:09:52.267+01:00  INFO 16800 --- [Lavalink] [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2025-08-22T22:09:52.268+01:00  INFO 16800 --- [Lavalink] [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2025-08-22T22:09:52.272+01:00  INFO 16800 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2025-08-22T22:09:52.282+01:00  INFO 16800 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2025-08-22T22:09:52.406+01:00  WARN 16800 --- [Lavalink] [main] l.server.config.SentryConfiguration      : Turning off sentry
+2025-08-22T22:09:52.883+01:00  INFO 16800 --- [Lavalink] [main] io.undertow                              : starting server: Undertow - 2.3.13.Final
+2025-08-22T22:09:52.971+01:00  INFO 16800 --- [Lavalink] [main] org.xnio                                 : XNIO version 3.8.8.Final
+2025-08-22T22:09:53.000+01:00  INFO 16800 --- [Lavalink] [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2025-08-22T22:09:53.179+01:00  INFO 16800 --- [Lavalink] [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2025-08-22T22:09:53.317+01:00  INFO 16800 --- [Lavalink] [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port 2333 (http) with context path '/'
+2025-08-22T22:09:53.331+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 4.447 seconds (process running for 8.522)
+2025-08-22T22:09:53.332+01:00  INFO 16800 --- [Lavalink] [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2025-08-22T22:10:56.015+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-22T22:10:56.016+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-22T22:10:56.019+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-22T22:10:56.057+01:00  WARN 16800 --- [Lavalink] [XNIO-1 task-2] l.s.config.RequestAuthorizationFilter    : Authorization missing for 127.0.0.1 on GET /version
+2025-08-22T22:10:56.059+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /version, client=127.0.0.1
+2025-08-22T22:11:13.013+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59668
+2025-08-22T22:11:13.156+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=127.0.0.1
+2025-08-22T22:11:13.365+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from OGGY MUSIC
+2025-08-22T22:11:13.424+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info?trace=true, client=127.0.0.1
+2025-08-22T22:11:54.557+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:karan aujla"
+2025-08-22T22:11:55.338+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: karan aujla
+2025-08-22T22:11:55.365+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3Akaran%20aujla&trace=true, client=127.0.0.1
+2025-08-22T22:11:55.533+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA8QMAVUZvciBBIFJlYXNvbiAoT2ZmaWNpYWwgVmlkZW8pIEthcmFuIEF1amxhIHwgVGFuaWEgIHwgSWtreSB8IExhdGVzdCBQdW5qYWJpIFNvbmdzIDIwMjUADlJlaGFhbiBSZWNvcmRzAAAAAAAC4kgACy1ZbG1uUGgtNnJFAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9LVlsbW5QaC02ckUBADBodHRwczovL2kueXRpbWcuY29tL3ZpLy1ZbG1uUGgtNnJFL21xZGVmYXVsdC5qcGcAAAd5b3V0dWJlAAAAAAAAAAA=","userData":{}},"volume":100,"position":0,"paused":false}
+2025-08-22T22:11:55.533+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"voice":{"token":"851b18a928f207f9","endpoint":"c-lhr18-2a08245e.discord.media:2087","sessionId":"00207ba1b5a6a457f3b35474d1f2ee96"}}
+2025-08-22T22:11:55.536+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:11:55.539+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:11:55.541+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:11:55.790+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records official"
+2025-08-22T22:11:56.204+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: loading with filter com.sedmelluq.discord.lavaplayer.natives.ConnectorNativeLibLoader$$Lambda/0x0000019db56f0b98@1f646de4
+2025-08-22T22:11:56.213+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: successfully loaded.
+2025-08-22T22:11:56.213+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: loading with filter null
+2025-08-22T22:11:56.232+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: successfully loaded.
+2025-08-22T22:11:56.360+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records official
+2025-08-22T22:11:56.405+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AFor%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20Rehaan%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:11:56.416+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records remix"
+2025-08-22T22:11:56.877+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records remix
+2025-08-22T22:11:56.890+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AFor%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20Rehaan%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:11:57.059+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Rehaan Records hits"
+2025-08-22T22:11:57.452+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Rehaan Records hits
+2025-08-22T22:11:57.457+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ARehaan%20Records%20hits&trace=true, client=127.0.0.1
+2025-08-22T22:11:57.462+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 live"
+2025-08-22T22:11:58.009+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 live
+2025-08-22T22:11:58.015+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AFor%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20live&trace=true, client=127.0.0.1
+2025-08-22T22:11:58.022+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Rehaan Records For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 cover"
+2025-08-22T22:11:58.387+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla popular songs"
+2025-08-22T22:11:58.539+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Rehaan Records For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 cover
+2025-08-22T22:11:58.543+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ARehaan%20Records%20For%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20cover&trace=true, client=127.0.0.1
+2025-08-22T22:11:58.905+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla popular songs
+2025-08-22T22:11:58.951+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20popular%20songs&trace=true, client=127.0.0.1
+2025-08-22T22:11:59.075+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Sidhu Moose Wala popular songs"
+2025-08-22T22:11:59.583+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Sidhu Moose Wala popular songs
+2025-08-22T22:11:59.591+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ASidhu%20Moose%20Wala%20popular%20songs&trace=true, client=127.0.0.1
+2025-08-22T22:11:59.598+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Diljit Dosanjh popular songs"
+2025-08-22T22:12:00.168+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Diljit Dosanjh popular songs
+2025-08-22T22:12:00.173+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ADiljit%20Dosanjh%20popular%20songs&trace=true, client=127.0.0.1
+2025-08-22T22:13:35.028+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"filters":{"timescale":{"speed":1.289999523162842,"pitch":1.289999523162842,"rate":0.9365999523162842}}}
+2025-08-22T22:13:35.051+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.g.n.nativeloader.NativeLibLoader       : Native library timescale: loading with parts [Part{feature=X86.avx2, part=avx2}]
+2025-08-22T22:13:35.054+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.g.n.nativeloader.NativeLibLoader       : Native library detector: loading with parts []
+2025-08-22T22:13:35.218+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.g.n.nativeloader.NativeLibLoader       : Native library detector: successfully loaded.
+2025-08-22T22:13:35.230+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] c.g.n.nativeloader.NativeLibLoader       : Native library timescale: successfully loaded.
+2025-08-22T22:14:52.183+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAAzAMAM0thcmFuIEF1amxhIHwgSWtreSAtIFAtUE9QIENVTFRVUkUgKE9mZmljaWFsIEF1ZGlvKQALS2FyYW4gQXVqbGEAAAAAAAM8IAALcEpmdGtST09oMnMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1wSmZ0a1JPT2gycwEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvcEpmdGtST09oMnMvbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:14:52.193+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:14:52.197+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:14:52.200+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:17:52.935+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAAxgMALUthcmFuIEF1amxhIHwgSWtreSAtIERheXRvbmEgKE9mZmljaWFsIEF1ZGlvKQALS2FyYW4gQXVqbGEAAAAAAAL10AALWFVMRFhvRlUxaFEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1YVUxEWG9GVTFoUQEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvWFVMRFhvRlUxaFEvbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:17:53.160+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:17:53.169+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:17:53.172+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:20:41.218+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA/wMAY0thcmFuIEF1amxhIFAtUG9wIEN1bHR1cmUgQWxidW0gSGl0IE9yIE1pc3MgfCBGb3IgQSBSZWFzb24gS2FyYW4gQXVqbGEgVmlkZW8gfCBLYXJhbiBBdWpsYSBOZXcgU29uZwAOS2FtYm9qIFJlY29yZHMAAAAAAAHoSAALTjNNYnBUcTVRMk0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OM01icFRxNVEyTQEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvTjNNYnBUcTVRMk0vbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:20:41.231+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:20:41.237+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:20:41.240+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:20:41.429+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records official"
+2025-08-22T22:20:41.666+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records official"
+2025-08-22T22:20:41.909+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records official
+2025-08-22T22:20:41.910+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:20:41.912+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix"
+2025-08-22T22:20:42.172+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records official
+2025-08-22T22:20:42.173+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.175+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix"
+2025-08-22T22:20:42.435+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.445+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "spsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix"
+2025-08-22T22:20:42.446+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=spsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.448+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "scsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix"
+2025-08-22T22:20:42.449+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] c.s.d.l.s.s.SoundCloudClientIdTracker    : Updating SoundCloud client ID (current is null).
+2025-08-22T22:20:42.546+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] c.s.d.l.s.s.SoundCloudClientIdTracker    : Updating SoundCloud client ID succeeded, new ID is QH0sodO4QzbRjYm1f4FpCtEJvOB3PbaU.
+2025-08-22T22:20:42.621+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.627+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "spsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix"
+2025-08-22T22:20:42.630+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=spsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.641+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "scsearch:Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix"
+2025-08-22T22:20:42.761+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix
+2025-08-22T22:20:42.761+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla P-Pop Culture Album Hit Or Miss | For A Reason Karan Aujla Video | Karan Aujla New Song Kamboj Records remix
+2025-08-22T22:20:42.775+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=scsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.775+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=scsearch%3AKaran%20Aujla%20P-Pop%20Culture%20Album%20Hit%20Or%20Miss%20%7C%20For%20A%20Reason%20Karan%20Aujla%20Video%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:20:42.792+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Kamboj Records hits"
+2025-08-22T22:20:42.794+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Kamboj Records hits"
+2025-08-22T22:20:43.152+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Kamboj Records hits
+2025-08-22T22:20:43.162+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Kamboj Records hits
+2025-08-22T22:20:43.191+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKamboj%20Records%20hits&trace=true, client=127.0.0.1
+2025-08-22T22:20:43.193+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKamboj%20Records%20hits&trace=true, client=127.0.0.1
+2025-08-22T22:22:25.941+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA5AMASDQ4IFJoeW1lcyAoTXVzaWMgVmlkZW8pIEthcmFuIEF1amxhICBNYW5uYSBNdXNpYyB8IE5ldyBQdW5qYWJpIFNvbmcgMjAyNQAOUmVoYWFuIFJlY29yZHMAAAAAAAGtsAALdWJKYTMzeHh3RVUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj11YkphMzN4eHdFVQEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvdWJKYTMzeHh3RVUvbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:22:25.954+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:22:25.957+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:22:25.960+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:23:57.418+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA3QMAQUF0IFBlYWNlIChPZmZpY2lhbCBWaWRlbykgS2FyYW4gQXVqbGEgfCBMYXRlc3QgUHVuamFiaSBTb25ncyAyMDI1AA5SZWhhYW4gUmVjb3JkcwAAAAAAAqPIAAtqVlZ3WVhWMjJ6ZwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWpWVndZWFYyMnpnAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9qVlZ3WVhWMjJ6Zy9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:23:57.695+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:23:57.722+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:At Peace (Official Video) Karan Aujla | Latest Punjabi Songs 2025 Rehaan Records official"
+2025-08-22T22:23:57.724+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:23:57.727+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:23:57.944+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:At Peace (Official Video) Karan Aujla | Latest Punjabi Songs 2025 Rehaan Records official"
+2025-08-22T22:23:58.194+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: At Peace (Official Video) Karan Aujla | Latest Punjabi Songs 2025 Rehaan Records official
+2025-08-22T22:23:58.196+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AAt%20Peace%20(Official%20Video)%20Karan%20Aujla%20%7C%20Latest%20Punjabi%20Songs%202025%20Rehaan%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:23:58.314+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: At Peace (Official Video) Karan Aujla | Latest Punjabi Songs 2025 Rehaan Records official
+2025-08-22T22:23:58.317+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AAt%20Peace%20(Official%20Video)%20Karan%20Aujla%20%7C%20Latest%20Punjabi%20Songs%202025%20Rehaan%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:26:20.938+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA+wMAX0ZvciBBIFJlYXNvbiBLYXJhbiBBdWpsYSB8IFRhbmlhIHwgTmV3IFB1bmphYmkgU29uZyAyMDI1IHwgS2FyYW4gQXVqbGEgTmV3IFNvbmcgfCBQLVBPUCBDVUxUVVJFAA5LYW1ib2ogUmVjb3JkcwAAAAAAAYagAAtFSUE3alZfVE5XRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUVJQTdqVl9UTldFAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9FSUE3alZfVE5XRS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:26:20.945+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:26:20.949+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:26:20.952+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:27:43.616+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA+wMAX0thcmFuIEF1amxhIEZ1bGwgQWxidW0gUC1Qb3AgQ3VsdHVyZSBXaXRoIE5ldyBTb25nIFZpZGVvIHwgUC1Qb3AgQ3VsdHVyZSB8IEthcmFuIEF1amxhIE5ldyBTb25nAA5LYW1ib2ogUmVjb3JkcwAAAAAAAlHAAAtpSURWOTYtTGlBUQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWlJRFY5Ni1MaUFRAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9pSURWOTYtTGlBUS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:27:43.627+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:27:43.631+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:27:43.634+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:27:43.821+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla Full Album P-Pop Culture With New Song Video | P-Pop Culture | Karan Aujla New Song Kamboj Records official"
+2025-08-22T22:27:43.958+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla Full Album P-Pop Culture With New Song Video | P-Pop Culture | Karan Aujla New Song Kamboj Records official"
+2025-08-22T22:27:44.431+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla Full Album P-Pop Culture With New Song Video | P-Pop Culture | Karan Aujla New Song Kamboj Records official
+2025-08-22T22:27:44.441+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20Full%20Album%20P-Pop%20Culture%20With%20New%20Song%20Video%20%7C%20P-Pop%20Culture%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:27:44.510+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla Full Album P-Pop Culture With New Song Video | P-Pop Culture | Karan Aujla New Song Kamboj Records official
+2025-08-22T22:27:44.601+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20Full%20Album%20P-Pop%20Culture%20With%20New%20Song%20Video%20%7C%20P-Pop%20Culture%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:29:50.604+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA1gMAPVdBVlkgKE9GRklDSUFMIFZJREVPKSBLQVJBTiBBVUpMQSB8IExBVEVTVCBQVU5KQUJJIFNPTkdTIDIwMjQAC0thcmFuIEF1amxhAAAAAAACdOgAC1hUcDVqYVJVM1dzAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9WFRwNWphUlUzV3MBADBodHRwczovL2kueXRpbWcuY29tL3ZpL1hUcDVqYVJVM1dzL21xZGVmYXVsdC5qcGcAAAd5b3V0dWJlAAAAAAAAAAA=","userData":{}},"volume":100,"position":0}
+2025-08-22T22:29:50.876+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:29:50.879+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:29:50.881+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:32:05.563+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA5wMATVNvIEhpZ2ggfCBPZmZpY2lhbCBNdXNpYyBWaWRlbyB8IFNpZGh1IE1vb3NlIFdhbGEgZnQuIEJZRyBCWVJEIHwgSHVtYmxlIE11c2ljAAxIdW1ibGUgTXVzaWMAAAAAAAOSEAALR2dtRkM4eThxM2sAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1HZ21GQzh5OHEzawEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvR2dtRkM4eThxM2svbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:32:05.568+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:32:05.572+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:32:05.574+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:32:05.794+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:So High | Official Music Video | Sidhu Moose Wala ft. BYG BYRD | Humble Music Humble Music official"
+2025-08-22T22:32:05.996+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:So High | Official Music Video | Sidhu Moose Wala ft. BYG BYRD | Humble Music Humble Music official"
+2025-08-22T22:32:06.448+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: So High | Official Music Video | Sidhu Moose Wala ft. BYG BYRD | Humble Music Humble Music official
+2025-08-22T22:32:06.456+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ASo%20High%20%7C%20Official%20Music%20Video%20%7C%20Sidhu%20Moose%20Wala%20ft.%20BYG%20BYRD%20%7C%20Humble%20Music%20Humble%20Music%20official&trace=true, client=127.0.0.1
+2025-08-22T22:32:06.647+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: So High | Official Music Video | Sidhu Moose Wala ft. BYG BYRD | Humble Music Humble Music official
+2025-08-22T22:32:06.675+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ASo%20High%20%7C%20Official%20Music%20Video%20%7C%20Sidhu%20Moose%20Wala%20ft.%20BYG%20BYRD%20%7C%20Humble%20Music%20Humble%20Music%20official&trace=true, client=127.0.0.1
+2025-08-22T22:35:22.538+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA2AMAPERpbGppdCBEb3NhbmpoOiBCb3JuIFRvIFNoaW5lIChPZmZpY2lhbCBNdXNpYyBWaWRlbykgRy5PLkEuVAAORGlsaml0IERvc2FuamgAAAAAAANTkAALZENtcDU2dFNTbUEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kQ21wNTZ0U1NtQQEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvZENtcDU2dFNTbUEvbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:35:22.897+01:00  INFO 16800 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] d.l.y.http.YoutubeAccessTokenTracker     : Updating YouTube visitor id succeeded, new one is Cgt0R2Z3Zk5mRWpoQSiaxaPFBjIKCgJERRIEEgAgIzoMCAEgn9jdrKPTuNRoWPaXicfX65nLjwE%3D, next update will be after 600 seconds.
+2025-08-22T22:35:22.906+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:35:22.909+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:35:22.911+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:38:25.185+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA+QMAXUthcmFuIEF1amxhIE5ldyBTb25nIFRlYXNlIFdpdGggQXZlZXJhIFNpbmdoICYgMjUgU29uZ3MgT2YgQXJqYW4gRGhpbGxvbiBBbGJ1bXMgfCBLYXJhbiBBdWpsYQAOS2FtYm9qIFJlY29yZHMAAAAAAAJRwAALbGRDNVJvblN4SEEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1sZEM1Um9uU3hIQQEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvbGRDNVJvblN4SEEvbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:38:25.203+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:38:25.206+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:38:25.211+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:38:25.368+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records official"
+2025-08-22T22:38:25.520+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records official"
+2025-08-22T22:38:25.781+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records official
+2025-08-22T22:38:25.782+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20New%20Song%20Tease%20With%20Aveera%20Singh%20%26%2025%20Songs%20Of%20Arjan%20Dhillon%20Albums%20%7C%20Karan%20Aujla%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:38:25.980+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records official
+2025-08-22T22:38:25.984+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20New%20Song%20Tease%20With%20Aveera%20Singh%20%26%2025%20Songs%20Of%20Arjan%20Dhillon%20Albums%20%7C%20Karan%20Aujla%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:38:25.995+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records remix"
+2025-08-22T22:38:26.416+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20New%20Song%20Tease%20With%20Aveera%20Singh%20%26%2025%20Songs%20Of%20Arjan%20Dhillon%20Albums%20%7C%20Karan%20Aujla%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:38:26.420+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "spsearch:Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records remix"
+2025-08-22T22:38:26.421+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=spsearch%3AKaran%20Aujla%20New%20Song%20Tease%20With%20Aveera%20Singh%20%26%2025%20Songs%20Of%20Arjan%20Dhillon%20Albums%20%7C%20Karan%20Aujla%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:38:26.428+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "scsearch:Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records remix"
+2025-08-22T22:38:26.873+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla New Song Tease With Aveera Singh & 25 Songs Of Arjan Dhillon Albums | Karan Aujla Kamboj Records remix
+2025-08-22T22:38:26.875+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=scsearch%3AKaran%20Aujla%20New%20Song%20Tease%20With%20Aveera%20Singh%20%26%2025%20Songs%20Of%20Arjan%20Dhillon%20Albums%20%7C%20Karan%20Aujla%20Kamboj%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:38:26.877+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Kamboj Records hits"
+2025-08-22T22:38:27.230+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Kamboj Records hits
+2025-08-22T22:38:27.241+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKamboj%20Records%20hits&trace=true, client=127.0.0.1
+2025-08-22T22:40:32.196+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAABAAMAZEZsaXAgU2lkZSBLYXJhbiBBdWpsYSAtIE9mZmljaWFsIFZpZGVvIHwgUFBvcCBDdWx0dXJlIHwgTmV3IFB1bmphYmkgU29uZyAyMDI1IHwgS2FyYW4gQXVqbGEgTmV3IFNvbmcADkthbWJvaiBSZWNvcmRzAAAAAAABeugAC0k3aldJWHVlZjNZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9STdqV0lYdWVmM1kBADBodHRwczovL2kueXRpbWcuY29tL3ZpL0k3aldJWHVlZjNZL21xZGVmYXVsdC5qcGcAAAd5b3V0dWJlAAAAAAAAAAA=","userData":{}},"volume":100,"position":0}
+2025-08-22T22:40:32.426+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:40:32.429+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:40:32.432+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:41:53.477+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA4gMASUNPVVJUU0lERSAoT0ZGSUNJQUwgTVVTSUMgVklERU8pIEtBUkFOIEFVSkxBICB8IExBVEVTVCBQVU5KQUJJIFNPTkdTIDIwMjUAC0thcmFuIEF1amxhAAAAAAACn+AAC1o4SVJScGhLRlpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9WjhJUlJwaEtGWkEBADBodHRwczovL2kueXRpbWcuY29tL3ZpL1o4SVJScGhLRlpBL21xZGVmYXVsdC5qcGcAAAd5b3V0dWJlAAAAAAAAAAA=","userData":{}},"volume":100,"position":0}
+2025-08-22T22:41:53.487+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:41:53.491+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:41:53.497+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:41:53.754+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA  | LATEST PUNJABI SONGS 2025 Karan Aujla official"
+2025-08-22T22:41:53.877+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA  | LATEST PUNJABI SONGS 2025 Karan Aujla official"
+2025-08-22T22:41:54.306+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA  | LATEST PUNJABI SONGS 2025 Karan Aujla official
+2025-08-22T22:41:54.313+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ACOURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Karan%20Aujla%20official&trace=true, client=127.0.0.1
+2025-08-22T22:41:54.501+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA  | LATEST PUNJABI SONGS 2025 Karan Aujla official
+2025-08-22T22:41:54.518+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ACOURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Karan%20Aujla%20official&trace=true, client=127.0.0.1
+2025-08-22T22:44:18.361+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA4AMAREF0IFBlYWNlIEtBUkFOIEFVSkxBIEZvcmVpZ25lcnMgUmVhY3Rpb24gfCBMYXRlc3QgUHVuamFiaSBTb25ncyAyMDI1AA5TdGF5IFNwaXJpdHVhbAAAAAAAC8egAAtHN0tIamZWQkxyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUc3S0hqZlZCTHJjAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9HN0tIamZWQkxyYy9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:44:18.395+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:44:18.403+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:44:18.411+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:45:56.430+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"track":{"encoded":null}}
+2025-08-22T22:45:56.434+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA8AMAVEthcmFuIEF1amxhIE5ldyBBbGJ1bSBQLVBvcCBDdWx0dXJlIEF2YWlsYWJsZSB8IEd1cmluZGVyIEdpbGwgfCBLYXJhbiBBdWpsYSBOZXcgU29uZwAOS2FtYm9qIFJlY29yZHMAAAAAAAHUwAALQTNnekdKcll2UU0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1BM2d6R0pyWXZRTQEAMGh0dHBzOi8vaS55dGltZy5jb20vdmkvQTNnekdKcll2UU0vbXFkZWZhdWx0LmpwZwAAB3lvdXR1YmUAAAAAAAAAAA==","userData":{}},"volume":100,"position":0}
+2025-08-22T22:45:56.710+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla New Album P-Pop Culture Available | Gurinder Gill | Karan Aujla New Song Kamboj Records official"
+2025-08-22T22:45:56.713+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:45:56.716+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:45:56.721+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:45:56.996+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla New Album P-Pop Culture Available | Gurinder Gill | Karan Aujla New Song Kamboj Records official"
+2025-08-22T22:45:57.085+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla New Album P-Pop Culture Available | Gurinder Gill | Karan Aujla New Song Kamboj Records official
+2025-08-22T22:45:57.091+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20New%20Album%20P-Pop%20Culture%20Available%20%7C%20Gurinder%20Gill%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:45:57.364+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla New Album P-Pop Culture Available | Gurinder Gill | Karan Aujla New Song Kamboj Records official
+2025-08-22T22:45:57.365+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20New%20Album%20P-Pop%20Culture%20Available%20%7C%20Gurinder%20Gill%20%7C%20Karan%20Aujla%20New%20Song%20Kamboj%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T22:46:33.158+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"track":{"encoded":null}}
+2025-08-22T22:46:33.229+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA/QMAX0tBUkFOIEFVSkxBIC0gQ09VUlRTSURFIChPRkZJQ0lBTCBNVVNJQyBWSURFTykgS0FSQU4gQVVKTEEgTkVXIFNPTkcgfCBMQVRFU1QgUFVOSkFCSSBTT05HUyAyMDI1ABBOdW1lcm8gVW5vIE11c2ljAAAAAAADjigAC01ObEI3Z3M0NTlrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9TU5sQjdnczQ1OWsBADBodHRwczovL2kueXRpbWcuY29tL3ZpL01ObEI3Z3M0NTlrL21xZGVmYXVsdC5qcGcAAAd5b3V0dWJlAAAAAAAAAAA=","userData":{}},"volume":100,"position":0}
+2025-08-22T22:46:33.236+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:46:33.239+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:46:33.241+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:46:33.508+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music official"
+2025-08-22T22:46:33.536+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music official"
+2025-08-22T22:46:34.032+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music official
+2025-08-22T22:46:34.036+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20official&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.039+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix"
+2025-08-22T22:46:34.051+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music official
+2025-08-22T22:46:34.053+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20official&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.150+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix"
+2025-08-22T22:46:34.505+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.510+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "spsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix"
+2025-08-22T22:46:34.519+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=spsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.632+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.659+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "scsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix"
+2025-08-22T22:46:34.663+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "spsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix"
+2025-08-22T22:46:34.668+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=spsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.694+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "scsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix"
+2025-08-22T22:46:34.872+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix
+2025-08-22T22:46:34.876+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 Numero Uno Music remix
+2025-08-22T22:46:34.883+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=scsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.884+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=scsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20Numero%20Uno%20Music%20remix&trace=true, client=127.0.0.1
+2025-08-22T22:46:34.896+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Numero Uno Music hits"
+2025-08-22T22:46:34.904+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Numero Uno Music hits"
+2025-08-22T22:46:35.394+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Numero Uno Music hits
+2025-08-22T22:46:35.413+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ANumero%20Uno%20Music%20hits&trace=true, client=127.0.0.1
+2025-08-22T22:46:35.419+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Numero Uno Music hits
+2025-08-22T22:46:35.422+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ANumero%20Uno%20Music%20hits&trace=true, client=127.0.0.1
+2025-08-22T22:46:35.424+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 live"
+2025-08-22T22:46:35.428+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 live"
+2025-08-22T22:46:36.278+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 live
+2025-08-22T22:46:36.281+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20live&trace=true, client=127.0.0.1
+2025-08-22T22:46:36.294+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Numero Uno Music KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 cover"
+2025-08-22T22:46:36.339+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 live
+2025-08-22T22:46:36.404+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20live&trace=true, client=127.0.0.1
+2025-08-22T22:46:36.410+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Numero Uno Music KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 cover"
+2025-08-22T22:46:36.856+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Numero Uno Music KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 cover
+2025-08-22T22:46:36.892+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Numero Uno Music KARAN AUJLA - COURTSIDE (OFFICIAL MUSIC VIDEO) KARAN AUJLA NEW SONG | LATEST PUNJABI SONGS 2025 cover
+2025-08-22T22:46:36.896+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ANumero%20Uno%20Music%20KARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20cover&trace=true, client=127.0.0.1
+2025-08-22T22:46:36.893+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ANumero%20Uno%20Music%20KARAN%20AUJLA%20-%20COURTSIDE%20(OFFICIAL%20MUSIC%20VIDEO)%20KARAN%20AUJLA%20NEW%20SONG%20%7C%20LATEST%20PUNJABI%20SONGS%202025%20cover&trace=true, client=127.0.0.1
+2025-08-22T22:46:56.684+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:46:59.986+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":38}
+2025-08-22T22:47:03.525+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:47:05.181+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"filters":{}}
+2025-08-22T22:50:22.356+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA4wMASENPVVJUU0lERSAoT0ZGSUNJQUwgTVVTSUMgVklERU8pIEtBUkFOIEFVSkxBIHwgTEFURVNUIFBVTkpBQkkgU09OR1MgMjAyNQANcGFuamFhYiBiZWF0cwAAAAAAAw1AAAtaeEltMTEtWGFzQQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVp4SW0xMS1YYXNBAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9aeEltMTEtWGFzQS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:50:22.393+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:50:22.398+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:50:22.401+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:53:45.449+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA7AMAU1lBQUQgfHwgS0FBRkkgfHwgeyBBVURJTyBUUkFDSyB9IHx8IFJBUCBTT05HICN1bmRlcmdyb3VuZCAjaGluZGkgI3JhcCAjc29uZyAjc2hvcnRzAAtLYWFGaSBIb3BlIAAAAAAAA9R4AAt2NXRQOEo5a3FfRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXY1dFA4SjlrcV9FAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS92NXRQOEo5a3FfRS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:53:45.586+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:53:45.615+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:53:45.660+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T22:53:45.826+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:YAAD || KAAFI || { AUDIO TRACK } || RAP SONG #underground #hindi #rap #song #shorts KaaFi Hope  official"
+2025-08-22T22:53:45.955+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:YAAD || KAAFI || { AUDIO TRACK } || RAP SONG #underground #hindi #rap #song #shorts KaaFi Hope  official"
+2025-08-22T22:53:46.076+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: YAAD || KAAFI || { AUDIO TRACK } || RAP SONG #underground #hindi #rap #song #shorts KaaFi Hope  official
+2025-08-22T22:53:46.082+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AYAAD%20%7C%7C%20KAAFI%20%7C%7C%20%7B%20AUDIO%20TRACK%20%7D%20%7C%7C%20RAP%20SONG%20%23underground%20%23hindi%20%23rap%20%23song%20%23shorts%20KaaFi%20Hope%20%20official&trace=true, client=127.0.0.1
+2025-08-22T22:53:46.277+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: YAAD || KAAFI || { AUDIO TRACK } || RAP SONG #underground #hindi #rap #song #shorts KaaFi Hope  official
+2025-08-22T22:53:46.279+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AYAAD%20%7C%7C%20KAAFI%20%7C%7C%20%7B%20AUDIO%20TRACK%20%7D%20%7C%7C%20RAP%20SONG%20%23underground%20%23hindi%20%23rap%20%23song%20%23shorts%20KaaFi%20Hope%20%20official&trace=true, client=127.0.0.1
+2025-08-22T22:58:00.246+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA3QMAPE5BSEFSIHx8IENIT1JJIFBBR0FMIEhBSSB8fCAgKFBST0QuQlkgRVNLUlkpKE9GRklDSUFMIFZJREVPKQATTkFIQVJfTVVTSUMgT0ZGSUNBTAAAAAAAAohwAAt4LVRaRXhQM2E5cwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXgtVFpFeFAzYTlzAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS94LVRaRXhQM2E5cy9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T22:58:00.253+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T22:58:00.257+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T22:58:00.258+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T23:00:52.615+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:At Peace - Karan Aujla (Official Audio) SQUAD MUSIC official"
+2025-08-22T23:00:52.617+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?noReplace=true&trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAABVQMAJ0F0IFBlYWNlIC0gS2FyYW4gQXVqbGEgKE9mZmljaWFsIEF1ZGlvKQALU1FVQUQgTVVTSUMAAAAAAAK6eAByTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoyMTIwOTg2MjkzLzVkODAyNTU2LTA4ZWEtNDg1Mi05ZGZmLTBmOTJhZjYxNjNkNC9zdHJlYW0vaGxzAAEAQ2h0dHBzOi8vc291bmRjbG91ZC5jb20vdXNlci0yMzc3ODE0MzcvYXQtcGVhY2Uta2FyYW4tYXVqbGEtb2ZmaWNpYWwBAENodHRwczovL2kxLnNuZGNkbi5jb20vYXJ0d29ya3MtWEVCRHBvelQzYk5mWVRDOC1oamdoaFEtb3JpZ2luYWwuanBnAAAKc291bmRjbG91ZAAAAAAAAAAA","userData":{}},"volume":100,"position":0}
+2025-08-22T23:00:52.875+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T23:00:52.878+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T23:00:52.878+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T23:00:52.993+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: At Peace - Karan Aujla (Official Audio) SQUAD MUSIC official
+2025-08-22T23:00:53.009+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AAt%20Peace%20-%20Karan%20Aujla%20(Official%20Audio)%20SQUAD%20MUSIC%20official&trace=true, client=127.0.0.1
+2025-08-22T23:02:21.725+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"track":{"encoded":null}}
+2025-08-22T23:02:21.744+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1
+2025-08-22T23:02:32.313+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:karan aujla"
+2025-08-22T23:02:32.650+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"voice":{"token":"635ecf04a3fc3ef6","endpoint":"c-lhr18-2a08245e.discord.media:2087","sessionId":"00207ba1b5a6a457f3b35474d1f2ee96"}}
+2025-08-22T23:02:32.777+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: karan aujla
+2025-08-22T23:02:32.859+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3Akaran%20aujla&trace=true, client=127.0.0.1
+2025-08-22T23:02:32.882+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"track":{"encoded":"QAAA8QMAVUZvciBBIFJlYXNvbiAoT2ZmaWNpYWwgVmlkZW8pIEthcmFuIEF1amxhIHwgVGFuaWEgIHwgSWtreSB8IExhdGVzdCBQdW5qYWJpIFNvbmdzIDIwMjUADlJlaGFhbiBSZWNvcmRzAAAAAAAC4kgACy1ZbG1uUGgtNnJFAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9LVlsbW5QaC02ckUBADBodHRwczovL2kueXRpbWcuY29tL3ZpLy1ZbG1uUGgtNnJFL21xZGVmYXVsdC5qcGcAAAd5b3V0dWJlAAAAAAAAAAA=","userData":{}},"volume":100,"position":0,"paused":false}
+2025-08-22T23:02:32.916+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":true}
+2025-08-22T23:02:32.921+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"paused":false}
+2025-08-22T23:02:32.926+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wzfslw5okl9sglt2/players/1401361799386759332?trace=true, client=127.0.0.1, payload={"volume":100}
+2025-08-22T23:02:33.128+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records official"
+2025-08-22T23:02:33.606+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records official
+2025-08-22T23:02:33.609+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AFor%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20Rehaan%20Records%20official&trace=true, client=127.0.0.1
+2025-08-22T23:02:33.612+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records remix"
+2025-08-22T23:02:34.052+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 Rehaan Records remix
+2025-08-22T23:02:34.060+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AFor%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20Rehaan%20Records%20remix&trace=true, client=127.0.0.1
+2025-08-22T23:02:34.075+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Rehaan Records hits"
+2025-08-22T23:02:34.506+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Rehaan Records hits
+2025-08-22T23:02:34.508+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ARehaan%20Records%20hits&trace=true, client=127.0.0.1
+2025-08-22T23:02:34.512+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 live"
+2025-08-22T23:02:34.966+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 live
+2025-08-22T23:02:34.968+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AFor%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20live&trace=true, client=127.0.0.1
+2025-08-22T23:02:35.034+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Rehaan Records For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 cover"
+2025-08-22T23:02:35.515+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Rehaan Records For A Reason (Official Video) Karan Aujla | Tania  | Ikky | Latest Punjabi Songs 2025 cover
+2025-08-22T23:02:35.550+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ARehaan%20Records%20For%20A%20Reason%20(Official%20Video)%20Karan%20Aujla%20%7C%20Tania%20%20%7C%20Ikky%20%7C%20Latest%20Punjabi%20Songs%202025%20cover&trace=true, client=127.0.0.1
+2025-08-22T23:02:35.891+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Karan Aujla popular songs"
+2025-08-22T23:02:36.340+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Karan Aujla popular songs
+2025-08-22T23:02:36.367+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3AKaran%20Aujla%20popular%20songs&trace=true, client=127.0.0.1
+2025-08-22T23:02:36.370+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Sidhu Moose Wala popular songs"
+2025-08-22T23:02:36.891+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Sidhu Moose Wala popular songs
+2025-08-22T23:02:36.905+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ASidhu%20Moose%20Wala%20popular%20songs&trace=true, client=127.0.0.1
+2025-08-22T23:02:36.912+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Diljit Dosanjh popular songs"
+2025-08-22T23:02:37.463+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search results for: Diljit Dosanjh popular songs
+2025-08-22T23:02:37.466+01:00  INFO 16800 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ADiljit%20Dosanjh%20popular%20songs&trace=true, client=127.0.0.1
