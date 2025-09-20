@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lavalink Dashboard</title>
+    <style>
+        body { display: flex; flex-direction: column; gap: 10px; background: #111; color: #fff; font-family: sans-serif; padding: 16px; }
+        .stats { display: flex; gap: 10px; justify-content: center; }
+        .node { border: 2px solid #444; padding: 10px; flex: 1; min-width: 200px; background: #0b0b0b; }
+        iframe { flex: 1 1 32%; height: 500px; border: 2px solid #444; background: #000; }
+        h1 { text-align: center; margin-bottom: 10px; }
+        .iframes { display: flex; gap: 10px; flex-wrap: wrap; }
+        .error { color: #f88; font-size: 0.9em; }
+        .small { font-size: 0.85em; color: #bbb; }
+    </style>
+</head>
+<body>
+    <h1>Lavalink Nodes Dashboard</h1>
+
+    <!-- Stats Panel -->
+    <div class="stats">
+        <div class="node" id="node-2333">
+            <h3>Node 2333</h3>
+            <p>CPU: <span class="cpu">-</span></p>
+            <p>Memory Used: <span class="mem">-</span></p>
+            <p>Players: <span class="players">-</span></p>
+            <p class="status small">Status: <span class="stat-text">unknown</span></p>
+        </div>
+        <div class="node" id="node-2334">
+            <h3>Node 2334</h3>
+            <p>CPU: <span class="cpu">-</span></p>
+            <p>Memory Used: <span class="mem">-</span></p>
+            <p>Players: <span class="players">-</span></p>
+            <p class="status small">Status: <span class="stat-text">unknown</span></p>
+        </div>
+        <div class="node" id="node-2335">
+            <h3>Node 2335</h3>
+            <p>CPU: <span class="cpu">-</span></p>
+            <p>Memory Used: <span class="mem">-</span></p>
+            <p>Players: <span class="players">-</span></p>
+            <p class="status small">Status: <span class="stat-text">unknown</span></p>
+        </div>
+    </div>
+
+    <!-- Terminals -->
+    <div class="iframes">
+        <iframe src="http://81.5.189.13:7333/" title="Lavalink 2333"></iframe>
+        <iframe src="http://81.5.189.13:7334/" title="Lavalink 2334"></iframe>
+        <iframe src="http://81.5.189.13:7335/" title="Lavalink 2335"></iframe>
+    </div>
+
+    <script>
+        // Host where the Lavalink nodes are reachable from the browser
+        const host = "http://81.5.189.13";
+
+        const nodes = [
+            { id: "node-2333", url: `${host}:2333/stats`, port: 2333 },
+            { id: "node-2334", url: `${host}:2334/stats`, port: 2334 },
+            { id: "node-2335", url: `${host}:2335/stats`, port: 2335 }
+        ];
+
+        // Lavalink password (user provided)
+        const LAVALINK_PASSWORD = "youshallnotpass";
+
+        async function fetchStats() {
+            for (const node of nodes) {
+                const el = document.getElementById(node.id);
+                try {
+                    const res = await fetch(node.url, {
+                        method: 'GET',
+                        headers: { 'Authorization': LAVALINK_PASSWORD }
+                    });
+
+                    if (!res.ok) {
+                        el.querySelector('.stat-text').innerText = `HTTP ${res.status}`;
+                        el.querySelector('.stat-text').classList.add('error');
+                        console.warn(`Node ${node.id} returned ${res.status}`);
+                        continue;
+                    }
+
+                    const data = await res.json();
+
+                    const cpuLoad = data?.cpu?.lavalinkLoad ?? null;
+                    const usedBytes = data?.memory?.used ?? null;
+                    const players = data?.players ?? '-';
+
+                    el.querySelector('.cpu').innerText = cpuLoad !== null ? (cpuLoad * 100).toFixed(1) + '%' : '-';
+                    el.querySelector('.mem').innerText = usedBytes !== null ? ((usedBytes / 1024 / 1024).toFixed(1)) + ' MB' : '-';
+                    el.querySelector('.players').innerText = players;
+                    el.querySelector('.stat-text').innerText = 'ok';
+                    el.querySelector('.stat-text').classList.remove('error');
+                } catch (err) {
+                    el.querySelector('.stat-text').innerText = 'error';
+                    el.querySelector('.stat-text').classList.add('error');
+                    el.querySelector('.cpu').innerText = '-';
+                    el.querySelector('.mem').innerText = '-';
+                    el.querySelector('.players').innerText = '-';
+                    console.warn('Failed to fetch stats for', node.id, err);
+                }
+            }
+        }
+
+        setInterval(fetchStats, 2000);
+        fetchStats();
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿server:
+server:
   port: 2334
   address: 0.0.0.0
   http2:
@@ -7,7 +7,8 @@
 lavalink:
   # Use local plugin JARs from `plugins/`; avoid remote dependency downloads
   jarPaths:
-    - ./plugins/youtube-plugin-1.13.3.jar
+    - ./plugins/youtube-plugin-1.13.5.jar
+    - ./plugins/lavasrc-plugin-4.8.1.jar
   server:
     password: "youshallnotpass"
     sources:
@@ -54,14 +55,27 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - MUSIC
       - WEB
-      - ANDROID_TESTSUITE
-      - TV
-      - IOS
+      - MWEB
+      - ANDROID_MUSIC
+      - IOS_MUSIC
+      - YTMUSIC
       - ANDROID
+      - IOS
+      - WEBEMBEDDED
+      - MUSIC
+      - ANDROID_VR
+      - TVHTML5EMBEDDED
+      - TV
     oauth:
-      enabled: false
+      enabled: true
+      refreshToken: "1//0gR7SvZZjdY2NCgYIARAAGBASNwF-L9IriXK5FvZRNxFeyhYdGbnBISNRoc7kcYMhmvEncmYMqm0rSwLiSU1UNtSkJKuesy3l-IE"
+    cookies: ./cookies.txt
+    
+    # Enhanced configuration for better cookie support
+    ratelimit: false
+    youtubeConfig:
+      restrictedMode: false
 
   lavasrc:
     providers:
@@ -97,6 +111,7 @@ logging:
   level:
     root: INFO
     lavalink: INFO
+    dev.lavalink.youtube: DEBUG
 
   request:
     enabled: true
